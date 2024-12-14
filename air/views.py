@@ -14,10 +14,9 @@ def contact_save(request):
         message = request.POST['message']
         if not name or not email or not message:
             messages.error(request, 'Please Fill All The fields')
-        else:
-            con = Contact(name=name,email=email,message=message)
-            messages.success(request, 'Sent Successful')
-            con.save()
+        con = Contact(name=name,email=email,message=message)
+        messages.success(request, 'Sent Successful')
+        con.save()
             
 
 def header(request):
