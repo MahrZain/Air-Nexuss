@@ -7,11 +7,11 @@ def home(request):
 def contact(request):
     if request == 'GET':
         return render(request , 'contact.html')
-def contactt(request):
+def contact_save(request):
     if request.method == 'POST':
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        message = request.POST.get('message')
+        name = request.POST['name']
+        email = request.POST['email']
+        message = request.POST['message']
         if not name or not email or not message:
             messages.error(request, 'Please Fill All The fields')
         else:

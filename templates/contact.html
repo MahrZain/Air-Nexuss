@@ -255,19 +255,19 @@ h1 {
             </div>
             </div>
     </div>
-    <form action="{% url 'contactt' %}" method="post">
+    <form action="{% url 'contact' %}" method="post">
 
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Name</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1">
+            <input name="name" type="email" class="form-control" id="exampleFormControlInput1">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
         <button type="sumit" class="btn btn-primary">Submit</button>
     </form>

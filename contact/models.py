@@ -11,8 +11,8 @@ class Contact(models.Model):
 
 
     class Meta:
-        verbose_name_plural = "Admin info's"
-        verbose_name = "Admin info"
+        verbose_name_plural = "Contact"
+        verbose_name = "Contact"
 
     def __str__(self):
         return self.email
