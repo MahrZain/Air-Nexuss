@@ -75,8 +75,16 @@
         border-radius: 2px;
      }
  }
-
-
+.inner .nav .active{
+    background-color: #374474;
+    color: white !important;
+}
+.inner .nav .nav-link{
+    color: black;
+}
+.tab-pane{
+    max-width: 878px;
+}
 
  /* ------------------------------------------------------------------------------ */
 
