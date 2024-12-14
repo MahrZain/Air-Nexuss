@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 96cc15da5aabc64ee45659ea08c573993465bc86
-
 import os
 from pathlib import Path
 
