@@ -21,6 +21,7 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'jazzmin',
+    'contact',
     'tawkto',
     'django.contrib.admin',
     'django.contrib.auth',

@@ -3,4 +3,3 @@ from .models import Header
 
 admin.site.register(Header)
 
-
