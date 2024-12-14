@@ -1,3 +1,6 @@
+body{
+    background-color: yellow;
+}
 .contact-form {
     padding-top: 85px;
     display: flex;
@@ -18,7 +21,7 @@
 .contact-form h1 {
     font-family: 'Poppins', sans-serif, 'arial';
     font-weight: 600;
-    font-size: 48px; /* Reduced for better display on mobile */
+    font-size: 48px; 
     color: white;
     text-align: center;
     margin-bottom: 20px;
@@ -27,7 +30,7 @@
 .contact-form h4 {
     font-family: 'Roboto', sans-serif, 'arial';
     font-weight: 400;
-    font-size: 18px; /* Slightly smaller font */
+    font-size: 18px; 
     color: #9b9b9b;
     line-height: 1.5;
 }
@@ -69,7 +72,7 @@ textarea:valid ~ label {
     color: white;
     border-radius: 4px;
     font-size: 1rem;
-    box-sizing: border-box; /* Ensure padding and width are calculated together */
+    box-sizing: border-box; 
 }
 
 .styled-input input:focus,
@@ -107,9 +110,9 @@ textarea {
                 0 1px 1px rgba(0, 0, 0, 0.09);
 }
 
-/* Responsive Adjustments */
+
 @media (min-width: 769px) {
     .submit-btn {
-        width: auto; /* Back to original width on larger screens */
+        width: auto; 
     }
 }
