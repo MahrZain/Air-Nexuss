@@ -1,0 +1,300 @@
+
+{% include 'header.html' %}
+
+<style>
+
+:root {
+    /* Defining CSS variables for colors and fonts */
+    --text-animation-color-start: rgba(255,0,0,1);
+    --text-animation-color-middle: rgba(0,255,0,1);
+    --text-animation-color-end: rgba(0,0,255,1);
+    --background-dark: #121212;
+    --font-family-default: 'Arial', sans-serif;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+}
+/* Basic reset and full height layout */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif; /* Using Arial as the font */
+    color: #fff; /* Light text on dark background */
+}
+
+/* Static gradient background */
+/* Dark mode gradient background */
+.background {
+background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+/* Content box styling */
+.content {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: #333;
+    text-align: center;
+}
+
+/* Form input and button styling */
+input[type="text"], button {
+    padding: 12px;
+    margin: 8px 0;
+    width: calc(100% - 24px);
+    display: block;
+    border-radius: 4px;
+}
+
+/* Styling radio buttons with labels to the right */
+.radio-group {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+.nc1{
+    justify-content: center !important;
+}
+.nc-animated-title {
+    margin-top: 2% !important;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-dark);
+    color: white;
+    font-family: var(--font-family-default);
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(90deg, var(--text-animation-color-start), var(--text-animation-color-middle), var(--text-animation-color-end));
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: nc-slide-colors 5s ease infinite;
+}
+
+@keyframes nc-slide-colors {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.radio-group label {
+    display: block; /* Each label on a new line */
+}
+
+/* Button styling */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 610px) {
+    .content {
+        padding: 15px;
+    }
+    .btn-warning {
+        width: 20vw !important;
+    }
+    
+}
+@media (width: 500px) {
+    .btn-warning {
+        width: 20vw !important;
+    }
+}
+.btn-warning{
+    width: 9vw;
+}
+.log-out{
+    margin-top:1%;
+}
+.log-out a{
+    text-decoration: none;
+}
+.submissionCount{
+    color: red;
+    font-weight: 600;
+}
+/* RGB running colors effect */
+h1 {
+    background: linear-gradient(90deg, rgba(255,0,0,1), rgb(212, 13, 179), rgba(0,0,255,1));
+    background-size: 200% auto;
+    color: #000;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 3s linear infinite;
+}
+
+@keyframes rainbow { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+.alert {
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    position: fixed;
+    top: -100px; /* Start hidden above the viewport */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Alert Types */
+.alert-success {
+    background-color: #d4edda; /* Green background for success */
+    border-color: #c3e6cb; /* Green border */
+    color: #155724; /* Dark green text */
+}
+
+.alert-error {
+    background-color: #f8d7da; /* Red background for error */
+    border-color: #f5c6cb; /* Red border */
+    color: #721c24; /* Dark red text */
+}
+
+.alert-warning {
+    background-color: #fff3cd; /* Yellow background for warning */
+    border-color: #ffeeba; /* Yellow border */
+    color: #856404; /* Dark yellow text */
+}
+
+/* Animation for Alerts */
+.animated-alert {
+    animation: slideIn 0.5s ease, stayVisible 3s ease 0.5s, slideOut 0.5s ease 3.5s;
+}
+
+@keyframes slideIn {
+    0% {
+        top: -100px; /* Start above the viewport */
+        opacity: 0;
+    }
+    100% {
+        top: 20px; /* End position in viewport */
+        opacity: 1;
+    }
+}
+
+@keyframes stayVisible {
+    0% {
+        top: 20px;
+        opacity: 1;
+    }
+    100% {
+        top: 20px;
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        top: 20px;
+        opacity: 1;
+    }
+    100% {
+        top: -100px; /* Slide back above the viewport */
+        opacity: 0;
+    }
+}
+
+
+</style>
+</head>
+<body>
+
+
+
+
+<div class="container">
+    <h1 class="justify-content:center;">Contact us</h1>
+    <div class="container">
+        <div class="background">
+            <div class="content">
+                {% if messages %}
+            {% for message in messages %}
+                <div class="alert animated-alert 
+                    {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+            {% endif %}
+            </div>
+            </div>
+    </div>
+    <form action="{% url 'contactt' %}" method="post">
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <button type="sumit" class="btn btn-primary">Submit</button>
+    </form>
+        
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById('userForm');
+            const submissionCount = document.getElementById('submissionCount');
+            let count = 0;
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the actual form submission
+                count++;
+                submissionCount.innerText = 'Submissions: ' + count;
+
+                // Clear the input after submission
+                document.getElementById('userInput').value = '';
+            });
+        });
+
+            // Automatically remove the alert after the animation completes
+            setTimeout(() => {
+                const alerts = document.querySelectorAll('.alert');
+                alerts.forEach(alert => {
+                    alert.remove(); // Remove alert from DOM
+                });
+            }, 4000); // 0.5s slide in + 3s stay visible + 0.5s slide out = 4s total
+        
+    </script>
+</div>

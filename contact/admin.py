@@ -1,13 +1,10 @@
 from django.contrib import admin
-from .models import Contact,Usrinfo
+from .models import Contact
 
 class ContactAdmin(admin.ModelAdmin):
     
-    list_display = ['name' , 'email']
+    list_display = ['name' , 'email', 'created']
     
-class UsrinfoAdmin(admin.ModelAdmin):
     
-    list_display = ['email' , 'phone']
 
 admin.site.register(Contact , ContactAdmin)
-admin.site.register(Usrinfo, UsrinfoAdmin)
