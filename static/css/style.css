@@ -35,5 +35,38 @@
  /* ------------------------------------------------------------------------------ */
 
 .cust-header{
-    
+    background-color: #2CA0EA; 
+    color:white; 
+    justify-content:center;
+    display: flex;
+    height: 3vw;
+    border-radius: 4px;
+    border-color: #2CA0EA;
+}
+.cust-header1{
+    background-color: #FF7638; 
+    color:white; 
+    justify-content:center;
+    display: flex;
+    height: 3vw;
+    border-radius: 4px;
+    border-color: #FF7638;
+}
+.cust-header2{
+    background-color: #17AD9A; 
+    color:white; 
+    justify-content:center;
+    display: flex;
+    height: 3vw;
+    border-radius: 4px;
+    border-color: #17AD9A;
+}
+.cust-header3{
+    background-color: #FA4C75; 
+    color:white; 
+    justify-content:center;
+    display: flex;
+    height: 3vw;
+    border-radius: 4px;
+    border-color: #FA4C75;
 }
