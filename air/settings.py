@@ -133,7 +133,6 @@ JAZZMIN_SETTINGS = {
     "login_logo_dark": None,
     }
 
-JAZZMIN_SETTINGS["show_ui_builder"] = True
 
 
 
