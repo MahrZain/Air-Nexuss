@@ -4,6 +4,10 @@ from contact.models import Contact
 from django.contrib import messages
 def home(request):
     return render(request , 'index.html')
+
+def about(request):
+    return render(request , 'about.html')
+
 def contact(request):
     if request == 'GET':
         return render(request , 'contact.html')
