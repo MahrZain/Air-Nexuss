@@ -21,6 +21,7 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'jazzmin',
+    'tawkto',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -169,3 +170,8 @@ JAZZMIN_UI_TWEAKS = {
         "success": "btn-success"
     }
 }
+
+
+TAWKTO_ID_SITE='675d1b0949e2fd8dfef7a010'
+
+TAWKTO_API_KEY='1413a75aff524cda94288814ced2eedaa498dfea'
